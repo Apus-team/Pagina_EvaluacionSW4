@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Final Examen Semana 4 | Apus Team - Construcción de Software</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 900: '#0c4a6e' },
+                        dark: '#0f172a',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .opacity-0 { opacity: 0; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="relative min-h-[70vh] flex items-center justify-center bg-dark overflow-hidden px-6 py-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-900 via-dark to-slate-900 opacity-90"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse-slow"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse-slow delay-200"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-brand-100 text-sm font-medium mb-8 backdrop-blur-md animate-fade-in-up">
+                <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+                Semana 4 • Evaluación Práctica
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-heading font-extrabold text-white tracking-tight mb-6 leading-tight animate-fade-in-up delay-100">
+                Informe Final ML <br/> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-purple-400">Apus Team</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                Docente: Ing. Hugo Hespetia Huamanga | Facultad de Ingeniería
+            </p>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 -mt-16 relative z-20 animate-fade-in-up delay-200">
+        <div class="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-white p-6 animate-float">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <div class="p-3"><div class="w-10 h-10 mx-auto bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-bold mb-2">FM</div><p class="text-xs font-semibold">Franco Mansilla</p></div>
+                <div class="p-3"><div class="w-10 h-10 mx-auto bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-bold mb-2">AQ</div><p class="text-xs font-semibold">Aderly Quispe</p></div>
+                <div class="p-3"><div class="w-10 h-10 mx-auto bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-bold mb-2">BH</div><p class="text-xs font-semibold">Brad Huaman</p></div>
+                <div class="p-3"><div class="w-10 h-10 mx-auto bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-bold mb-2">TV</div><p class="text-xs font-semibold">Thiery Vargas</p></div>
+                <div class="p-3"><div class="w-10 h-10 mx-auto bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-bold mb-2">FH</div><p class="text-xs font-semibold">Frank Hinojosa</p></div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-6 py-20 space-y-24">
+
+        <section class="opacity-0 transition-opacity duration-1000">
+            <div class="flex items-center gap-3 mb-10 inline-flex">
+                <div class="bg-slate-800 text-white p-3 rounded-xl"><i class="ph-bold ph-git-branch text-2xl"></i></div>
+                <h2 class="text-3xl font-heading font-bold text-dark">Parte 1: Entorno Colaborativo</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="ph-fill ph-file-code text-brand-500"></i> 1.1 Estructura</h3>
+                    <p class="text-slate-600 mb-6 text-sm">Configuración de <code>README.md</code> y <code>.gitignore</code>.</p>
+                    <div class="bg-slate-100 rounded-xl p-2 border border-slate-200">
+                         <img src="images/img1.jpg" alt="Captura README" class="w-full rounded-lg mix-blend-multiply" onerror="this.src='https://placehold.co/600x300?text=Sube+captura_readme.png'">
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="ph-fill ph-shield-check text-brand-500"></i> 1.2 Ramas</h3>
+                    <p class="text-slate-600 mb-6 text-sm">Creación de <code>develop</code> y protección de la rama <code>main</code>.</p>
+                    <div class="bg-slate-100 rounded-xl p-2 border border-slate-200">
+                         <img src="images/img2.jpg" alt="Captura Ramas" class="w-full rounded-lg mix-blend-multiply" onerror="this.src='https://placehold.co/600x300?text=Sube+captura_ramas.png'">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="opacity-0 transition-opacity duration-1000">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
+                <div class="flex items-center gap-3 inline-flex">
+                    <div class="bg-blue-600 text-white p-3 rounded-xl"><i class="ph-bold ph-chart-line-up text-2xl"></i></div>
+                    <h2 class="text-3xl font-heading font-bold text-dark">Parte 2: Regresión</h2>
+                </div>
+                <div class="px-4 py-2 bg-blue-50 text-blue-700 font-bold text-xs uppercase rounded-lg border border-blue-100">Dataset A: USA Housing</div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100">
+                    <h3 class="font-bold text-lg mb-2">2.1 Lineal Simple</h3>
+                    <p class="text-xs text-slate-500 mb-4 h-8">Análisis básico de una sola variable.</p>
+                    <img src="images/img3.jpg" alt="Grafica" class="w-full h-32 object-cover rounded-lg bg-slate-100 mb-4" onerror="this.src='https://placehold.co/400x200?text=grafica_simple.png'">
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100">
+                    <h3 class="font-bold text-lg mb-2">2.2 Lineal Múltiple</h3>
+                    <p class="text-xs text-slate-500 mb-4 h-8">Uso de múltiples características de la vivienda.</p>
+                    <img src="images/img4.png" alt="Grafica" class="w-full h-32 object-cover rounded-lg bg-slate-100 mb-4" onerror="this.src='https://placehold.co/400x200?text=grafica_multiple.png'">
+                    <img src="images/img5.png" alt="Grafica" class="w-full h-32 object-cover rounded-lg bg-slate-100 mb-4" onerror="this.src='https://placehold.co/400x200?text=grafica_multiple.png'">
+                    <img src="images/img6.png" alt="Grafica" class="w-full h-32 object-cover rounded-lg bg-slate-100 mb-4" onerror="this.src='https://placehold.co/400x200?text=grafica_multiple.png'">
+                </div>
+
+
+
+
+
+                <div class="relative bg-dark p-6 rounded-2xl shadow-xl overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-900 to-dark opacity-90"></div>
+                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=400&q=80" alt="bg" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10">
+                        <div class="bg-brand-500 text-white text-[10px] font-bold px-2 py-1 rounded inline-block mb-2 uppercase">Destacado</div>
+                        <h3 class="font-bold text-white text-lg mb-2">2.3 Polinómica</h3>
+                        <p class="text-xs text-brand-100 mb-4">Ajuste no lineal (Grado 2).</p>
+                        <img src="images/img7.png" alt="Grafica" class="w-full h-32 object-cover rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 mb-4" onerror="this.src='https://placehold.co/400x200?text=grafica_polinomica.png'">
+                        <img src="images/img8.png" alt="Grafica" class="w-full h-32 object-cover rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 mb-4" onerror="this.src='https://placehold.co/400x200?text=grafica_polinomica.png'">
+                        <img src="images/img9.png" alt="Grafica" class="w-full h-32 object-cover rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 mb-4" onerror="this.src='https://placehold.co/400x200?text=grafica_polinomica.png'">
+                        <img src="images/img10.png" alt="Grafica" class="w-full h-32 object-cover rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 mb-4" onerror="this.src='https://placehold.co/400x200?text=grafica_polinomica.png'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="opacity-0 transition-opacity duration-1000">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
+                <div class="flex items-center gap-3 inline-flex">
+                    <div class="bg-purple-600 text-white p-3 rounded-xl"><i class="ph-bold ph-heartbeat text-2xl"></i></div>
+                    <h2 class="text-3xl font-heading font-bold text-dark">Parte 3: Clasificación</h2>
+                </div>
+                <div class="px-4 py-2 bg-purple-50 text-purple-700 font-bold text-xs uppercase rounded-lg border border-purple-100">Dataset B: Stroke Prediction</div>
+            </div>
+
+            <div class="bg-white rounded-[2rem] shadow-lg border border-slate-100 overflow-hidden group">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="relative bg-slate-900 p-8 flex items-center justify-center overflow-hidden min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay group-hover:scale-105 transition-transform duration-700">
+                        <div class="relative z-10 bg-white p-2 rounded-xl shadow-2xl transform group-hover:-rotate-2 transition-transform duration-500">
+                            <img src="images/img12.png" alt="Matriz" class="rounded max-w-full h-auto" onerror="this.src='https://placehold.co/300x300?text=matriz_confusion.png'">
+                            <img src="images/img13.png" alt="Matriz" class="rounded max-w-full h-auto" onerror="this.src='https://placehold.co/300x300?text=matriz_confusion.png'">
+                            <img src="images/img14.png" alt="Matriz" class="rounded max-w-full h-auto" onerror="this.src='https://placehold.co/300x300?text=matriz_confusion.png'">
+                        </div>
+                    </div>
+                    <div class="p-10 lg:p-14 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">3.1 Regresión Logística</h3>
+                        <p class="text-slate-500 mb-8 text-sm">Clasificación binaria de derrames cerebrales tras escalado de variables.</p>
+                        <div class="flex gap-4">
+                            <div class="flex-1 bg-purple-50 rounded-xl p-4 text-center border border-purple-100"><p class="text-xs font-bold text-purple-400 mb-1">ACCURACY</p><p class="text-2xl font-black text-purple-700">94%</p></div>
+                            <div class="flex-1 bg-purple-50 rounded-xl p-4 text-center border border-purple-100"><p class="text-xs font-bold text-purple-400 mb-1">PRECISION</p><p class="text-2xl font-black text-purple-700">89%</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="opacity-0 transition-opacity duration-1000">
+            <div class="flex items-center gap-3 mb-10 inline-flex">
+                <div class="bg-emerald-500 text-white p-3 rounded-xl"><i class="ph-bold ph-check-circle text-2xl"></i></div>
+                <h2 class="text-3xl font-heading font-bold text-dark">Parte 4: Integración</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between gap-4">
+                        <div>
+                            <h3 class="font-bold text-sm mb-1"><i class="ph-fill ph-git-merge text-emerald-500"></i> 4.1 Conflictos Resueltos</h3>
+                            <p class="text-xs text-slate-500">Merge exitoso en rama develop.</p>
+                        </div>
+                        <img src="/images/imgcommits.png" class="w-32 h-20 object-cover rounded bg-slate-100 border border-slate-200" onerror="this.src='https://placehold.co/128x80?text=Foto'">
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between gap-4">
+                        <div>
+                            <h3 class="font-bold text-sm mb-1"><i class="ph-fill ph-git-commit text-emerald-500"></i> 4.2 Commits (100%)</h3>
+                            <p class="text-xs text-slate-500">Participación total del equipo.</p>
+                        </div>
+                        <img src="images/imgbranches.png" class="w-32 h-20 object-cover rounded bg-slate-100 border border-slate-200" onerror="this.src='https://placehold.co/128x80?text=Foto'">
+                    </div>
+                </div>
+
+                <div class="bg-dark rounded-2xl shadow-xl p-8 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500 rounded-full mix-blend-overlay filter blur-[50px] opacity-20"></div>
+                    <h3 class="text-lg font-bold mb-6 text-emerald-400 relative z-10">4.3 Tabla Resumen de Métricas</h3>
+                    <table class="w-full text-left text-sm relative z-10">
+                        <thead>
+                            <tr class="border-b border-white/10 text-slate-400">
+                                <th class="pb-3 font-medium">Modelo</th>
+                                <th class="pb-3 font-medium">Métrica</th>
+                                <th class="pb-3 font-medium text-right">Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-200">
+                            <tr class="border-b border-white/5">
+                                <td class="py-3">Regresión Simple</td><td class="py-3">R² Score</td><td class="py-3 text-right font-bold text-emerald-400">0.XX</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-3">Regresión Múltiple</td><td class="py-3">R² Score</td><td class="py-3 text-right font-bold text-emerald-400">0.XX</td>
+                            </tr>
+                            <tr class="border-b border-white/5 bg-white/5">
+                                <td class="py-3 text-brand-300 font-semibold pl-2">Reg. Polinómica</td><td class="py-3">R² Score</td><td class="py-3 text-right font-bold text-emerald-400">0.854</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">Regresión Logística</td><td class="py-3">Accuracy</td><td class="py-3 text-right font-bold text-purple-400">94%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-brand-600 to-brand-800 rounded-2xl p-8 text-white shadow-lg">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-2"><i class="ph-fill ph-lightbulb"></i> 5. Conclusiones</h3>
+                <p class="text-sm text-brand-100 leading-relaxed">
+                    El trabajo colaborativo bajo Git fue fundamental. En el Dataset A, la <strong class="text-white">Regresión Polinómica</strong> capturó mejor la complejidad, obteniendo un R² superior, demostrando que los precios requieren flexibilidad. En el Dataset B, la <strong class="text-white">Regresión Logística</strong> logró clasificación efectiva. El uso de ramas garantizó la estabilidad del código.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+        <p>Apus Team © 2026 | Universidad Continental</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if(e.isIntersecting) { e.target.classList.remove('opacity-0'); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('section.opacity-0').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
